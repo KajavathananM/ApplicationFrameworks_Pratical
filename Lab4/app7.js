@@ -1,0 +1,19 @@
+const http= require('http');
+
+http.createServer((req,res)=>{
+    res.setHeader('Content-Type','text/html');
+
+    switch(req.method){
+        case 'GET':
+            res.write('<h1>Hello this is kaja</h1>');
+            res.end();
+            break;
+        case 'POST':
+            req.on('data', data =>{
+                res.write('<h1>Hello '+ data +'</h1>');
+            });
+            break;
+    }
+}).listen(3000,(err) =>{
+    console.log("Server is listening to port 3000");
+});
