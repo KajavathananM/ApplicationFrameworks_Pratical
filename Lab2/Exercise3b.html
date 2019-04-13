@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise3b</title>
+    <script type="text/javascript">
+        function fetchUsers(){
+           return fetch('https://api.github.com/users').then(response => response.json());
+        }
+        fetchUsers().then(function (json) {
+            console.log(json);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
