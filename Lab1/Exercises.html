@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exerises</title>
+</head>
+<script type="text/javascript">
+
+   //------------------Exercise 1------------------------------------
+    var runMe=function () {
+        console.log("Hello World");
+    }
+    function run(param){
+        param()
+    }
+    run(runMe)
+   //-------------------Exercise 2----------------------------------
+   var student={
+       "name":"Kajavathanan",
+       "age":"21",
+       "fee":function () {
+           document.write("Course Fee is 2000"+"<br>");
+       }
+   }
+   document.write("Name is "+student.name+"<br>");
+   document.write("Age is "+student.age+"<br>");
+   student.fee();
+   //------------------Exercise 3------------------------------------
+    var vehicleName="Toyota";
+    function  printVehicleName() {
+        document.write(vehicleName+" ");
+    }
+    var  vehicle={
+        "vehicleName":"Honda",
+        "getVehicleName":function () {
+            document.write(this.vehicleName+" ");
+            document.write(vehicleName+" ");
+        }
+    }
+    printVehicleName();
+    vehicle.getVehicleName();
+    document.write("<br>")
+   //----------------------------------------------------------------
+   //------------------Exercise 4------------------------------------
+   function calculateTaxAmount(taxPercentage)
+   {
+       function TaxAmount(amount)
+       {
+           return (amount+( (taxPercentage/100)*amount) );
+       }
+        return TaxAmount;
+   }
+   var amount=calculateTaxAmount(10);
+   document.write("Tax amount= "+amount(500)+"<br>");
+   //----------------------------------------------------------------
+   //------------------Exercise 5------------------------------------
+   function githubAPI(callback){
+       $.getJSON("https://api.github.com/users", callback);
+   }
+
+   function userEx(data){
+       data.forEach(element => {
+           if(element.id == 1){
+               console.log(element.url)
+           }
+       });
+   }
+
+   githubAPI(userEx);
+
+   //----------------------------------------------------------------
+
+</script>
+<body>
+
+</body>
+</html>

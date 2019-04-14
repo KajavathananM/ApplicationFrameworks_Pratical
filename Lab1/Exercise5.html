@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise5</title>
+    <script type="text/javascript">
+        function githubAPI(callback){
+            $.getJSON("https://api.github.com/users", callback);
+        }
+
+        function userEx(data){
+            data.forEach(element => {
+                if(element.id == 1){
+                    console.log(element.url)
+                }
+            });
+        }
+
+        githubAPI(userEx);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

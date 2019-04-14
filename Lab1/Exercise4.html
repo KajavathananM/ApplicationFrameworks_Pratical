@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise4</title>
+    <script type="text/javascript">
+        function calculateTaxAmount(taxPercentage)
+        {
+            function TaxAmount(amount)
+            {
+                return (amount+( (taxPercentage/100)*amount) );
+            }
+            return TaxAmount;
+        }
+        var amount=calculateTaxAmount(10);
+        document.write("Tax amount= "+amount(500)+"<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

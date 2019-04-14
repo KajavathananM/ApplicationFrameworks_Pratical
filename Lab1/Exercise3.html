@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise3</title>
+    <script type="text/javascript">
+        var vehicleName="Toyota";
+        function  printVehicleName() {
+            document.write(vehicleName+" ");
+        }
+        var  vehicle={
+            "vehicleName":"Honda",
+            "getVehicleName":function () {
+                document.write(this.vehicleName+" ");
+                document.write(vehicleName+" ");
+            }
+        }
+        printVehicleName();
+        vehicle.getVehicleName();
+        document.write("<br>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>
